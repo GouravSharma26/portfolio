@@ -2,12 +2,13 @@ import { motion } from 'framer-motion'
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 px-6 bg-white text-gray-800">
+    <section id="skills" className="w-full bg-gray-100 text-black py-20 px-6">
       <motion.h2
         className="text-4xl font-bold text-center mb-12"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
       >
         Skills
       </motion.h2>
@@ -18,6 +19,7 @@ export default function Skills() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           <h3 className="text-2xl font-semibold mb-4">Frontend</h3>
           <ul className="list-disc list-inside space-y-2">
@@ -33,6 +35,7 @@ export default function Skills() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
         >
           <h3 className="text-2xl font-semibold mb-4">Backend & Database</h3>
           <ul className="list-disc list-inside space-y-2">
@@ -47,6 +50,7 @@ export default function Skills() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
         >
           <h3 className="text-2xl font-semibold mb-4">Tools</h3>
           <ul className="list-disc list-inside space-y-2">
@@ -61,6 +65,7 @@ export default function Skills() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
         >
           <h3 className="text-2xl font-semibold mb-4">Languages</h3>
           <ul className="list-disc list-inside space-y-2">

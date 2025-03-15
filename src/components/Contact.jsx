@@ -8,6 +8,7 @@ export default function Contact() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
       >
         Contact
       </motion.h2>
@@ -17,6 +18,7 @@ export default function Contact() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
       >
         <p>Feel free to reach out for collaborations or just a friendly hello 👋</p>
         <p>Email: <a href="mailto:gouravsharma262@gmail.com" className="text-blue-500">gouravsharma262@gmail.com</a></p>

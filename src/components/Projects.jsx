@@ -1,8 +1,26 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
 export default function Projects() {
+  const projects = [
+    {
+      id: 1,
+      title: "Project One",
+      description: "Description of project one",
+      technologies: ["React", "Tailwind", "Framer Motion"],
+      github: "https://github.com/yourusername/project-one",
+    },
+    {
+      id: 2,
+      title: "Project Two",
+      description: "Description of project two",
+      technologies: ["Node.js", "Express", "MongoDB"],
+      github: "https://github.com/yourusername/project-two",
+    },
+    // Add more...
+  ];
+
   return (
-    <section id="projects" className="py-16 px-6 bg-gray-100 text-gray-800">
+    <section id="projects" className="w-full bg-white text-black py-20 px-6">
       <motion.h2
         className="text-4xl font-bold text-center mb-12"
         initial={{ opacity: 0 }}
@@ -20,6 +38,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
+            viewport={{ once: true }}
           >
             <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
             <p className="mb-4">{project.description}</p>
@@ -28,10 +47,17 @@ export default function Projects() {
                 <span key={i} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">{tech}</span>
               ))}
             </div>
-            <a href={project.github} target="_blank" className="text-white bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">GitHub Repo</a>
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white bg-blue-500 px-4 py-2 rounded hover:bg-blue-600"
+            >
+              GitHub Repo
+            </a>
           </motion.div>
         ))}
       </div>
     </section>
-  )
+  );
 }
