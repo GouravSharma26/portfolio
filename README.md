@@ -37,10 +37,10 @@ I enjoy problem-solving, collaborating with teams, and continuously learning new
 
 ## 🔗 Links
 
-- 🌐 **Live Portfolio**: [[https://portfolio-gouravsharma26s-projects.vercel.app/](#)  
+- 🌐 **Live Portfolio**: [[Coming Soon!](https://portfolio-gouravsharma26s-projects.vercel.app/)](#)  
 - 📧 **Email**: gourav2004sharmans@gmail.com  
-- 💼 **LinkedIn**: [linkedin.com/in/gourav](#)  
-- 🐙 **GitHub**: [github.com/gourav](#)
+- 💼 **LinkedIn**: [[linkedin.com/in/gourav](https://www.linkedin.com/in/gourav-sharma-4919862a7)](#)  
+- 🐙 **GitHub**: [[github.com/gourav](https://github.com/GouravSharma26)](#)
 
 ---
 
@@ -48,13 +48,6 @@ I enjoy problem-solving, collaborating with teams, and continuously learning new
 
 I’m open to suggestions and improvements!  
 If you have ideas to make this portfolio better, feel free to connect or fork the repository and share your feedback.
-
----
-
-## 📜 License
-
-This project is licensed for **personal use and learning purposes**.  
-Feel free to take inspiration for your own portfolio but please give credit when due! 😊
 
 ---
 
