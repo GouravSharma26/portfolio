@@ -1,49 +1,65 @@
-import { motion } from 'framer-motion'
+import React from "react";
+import { FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
 
-export default function Contact() {
+const Contact = () => {
   return (
-    <section id="contact" className="py-16 px-6 bg-gray-100 text-gray-800">
-      <motion.h2
-        className="text-4xl font-bold text-center mb-12"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Contact
-      </motion.h2>
+    <section id="contact" className="py-20 px-6 bg-gray-100">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-12">Contact Me</h2>
 
-      <motion.div
-        className="max-w-3xl mx-auto text-center space-y-4"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <p>Feel free to reach out for collaborations or just a friendly hello 👋</p>
-        <p>Email: <a href="mailto:gouravsharma262@gmail.com" className="text-blue-500">gouravsharma262@gmail.com</a></p>
-        <p>Location: Jaipur, Rajasthan, India</p>
+        <div className="flex flex-col items-center space-y-6 text-gray-700 text-lg">
+          <div className="flex items-center space-x-4">
+            <FaEnvelope className="text-blue-600 text-2xl" />
+            <a href="mailto:gouravXXXXX@gmail.com" className="hover:text-blue-600 transition duration-300">
+              gouravXXXXX@gmail.com
+            </a>
+          </div>
 
-        <div className="flex justify-center space-x-4 mt-6">
-          <motion.a
-            href="https://github.com/GouravSharma26"
-            target="_blank"
-            className="text-gray-600 hover:text-black"
-            whileHover={{ scale: 1.1 }}
-          >
-            GitHub
-          </motion.a>
+          <div className="flex items-center space-x-4">
+            <FaPhone className="text-blue-600 text-2xl" />
+            <span>+91 XXXXXXXX</span>
+          </div>
 
-          <motion.a
-            href="https://www.linkedin.com/in/gourav-sharma26/"
-            target="_blank"
-            className="text-gray-600 hover:text-black"
-            whileHover={{ scale: 1.1 }}
-          >
-            LinkedIn
-          </motion.a>
+          <div className="flex items-center space-x-4">
+            <FaLinkedin className="text-blue-600 text-2xl" />
+            <a
+              href="https://www.linkedin.com/in/gourav-sharma-4919862a7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-600 transition duration-300"
+            >
+              linkedin.com/in/gourav-sharma-4919862a7
+            </a>
+          </div>
         </div>
-      </motion.div>
+
+        {/* Optional: Contact Form */}
+        {/* <form className="mt-12 space-y-4">
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-blue-600"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-blue-600"
+          />
+          <textarea
+            placeholder="Your Message"
+            rows="5"
+            className="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-blue-600"
+          ></textarea>
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition duration-300"
+          >
+            Send Message
+          </button>
+        </form> */}
+      </div>
     </section>
-  )
-}
+  );
+};
+
+export default Contact;
