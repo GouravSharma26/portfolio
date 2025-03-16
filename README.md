@@ -37,8 +37,8 @@ I enjoy problem-solving, collaborating with teams, and continuously learning new
 
 ## 🔗 Links
 
-- 🌐 **Live Portfolio**: [Coming Soon!](#)  
-- 📧 **Email**: gourav@example.com  
+- 🌐 **Live Portfolio**: [[https://portfolio-gouravsharma26s-projects.vercel.app/](#)  
+- 📧 **Email**: gourav2004sharmans@gmail.com  
 - 💼 **LinkedIn**: [linkedin.com/in/gourav](#)  
 - 🐙 **GitHub**: [github.com/gourav](#)
 
