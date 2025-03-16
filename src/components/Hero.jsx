@@ -1,4 +1,5 @@
 import React from "react";
+import { Typewriter } from "react-simple-typewriter";
 import {
   FaLinkedin,
   FaGithub,
@@ -10,16 +11,25 @@ import {
 const Hero = () => {
   return (
     <section className="w-screen h-screen flex justify-center items-center bg-gray-900 text-white py-20 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-        {/* Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
-          Hi, I'm Gourav Sharma
-        </h1>
+      <div className="container mx-auto px-4 text-center">
+        {/* Name */}
+        <h1 className="text-5xl font-bold mb-4">Hi, I'm Gourav Sharma</h1>
 
-        {/* Subheading */}
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6">
-          Aspiring Software Developer
-        </h2>
+        <div className="text-2xl text-blue-400">
+        <Typewriter
+          words={[
+            "Aspiring Software Developer",
+            "Full Stack Web Developer",
+            "React & Django Enthusiast"
+          ]}
+          loop={true}
+          cursor
+          cursorStyle="_"
+          typeSpeed={70}
+          deleteSpeed={50}
+          delaySpeed={1500}
+        />
+        </div>
 
         {/* Description */}
         <p className="max-w-2xl mx-auto mb-8 text-gray-300 text-sm sm:text-base md:text-lg">
