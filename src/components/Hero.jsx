@@ -80,7 +80,7 @@ const Hero = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex justify-center gap-4 mt-8">
           <a
             href="#contact"
             className="bg-transparent border border-blue-500 text-blue-500 px-6 py-3 rounded-full hover:bg-blue-500 hover:text-white transition text-sm sm:text-base"
