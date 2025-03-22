@@ -8,7 +8,7 @@ const About = () => {
         {/* Profile Image */}
         <div className="w-full md:w-1/3 mb-10 md:mb-0 flex justify-center">
           <img
-            src="/abme.jpg" // Replace with your image path (put in public folder)
+            src="/abme.png" // Replace with your image path (put in public folder)
             alt="Gourav Sharma"
             className="rounded-2xl shadow-lg w-64 h-64 object-cover"
           />

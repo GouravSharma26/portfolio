@@ -6,22 +6,31 @@ import {
   FaEnvelope,
   FaTwitter,
   FaInstagram,
+  FaReact,
+  FaNodeJs,
 } from "react-icons/fa";
+import { SiDjango, SiPostgresql } from "react-icons/si";
 
 const Hero = () => {
   return (
-    <section className="w-screen h-screen flex justify-center items-center bg-gray-900 text-white py-10 px-4">
-      <div className="bg-gray-800 rounded-xl shadow-xl p-10 flex flex-col items-center max-w-xl w-full text-center">
+    <section className="w-screen h-screen flex justify-center items-center bg-gray-900 text-white px-4">
+      <div className="relative bg-gray-800 rounded-xl shadow-xl p-10 flex flex-col items-center max-w-xl w-full text-center">
         
-        {/* Profile Image */}
-        <div className="relative w-40 h-40 mb-6">
-          <div className="rounded-full border-8 border-yellow-400 w-full h-full overflow-hidden">
+        {/* Profile Image with Animated Ring */}
+        <div className="relative w-48 h-48 mb-6">
+          {/* Outer animated ring */}
+          <div className="absolute top-0 left-0 w-full h-full rounded-full border-4 border-yellow-400 animate-spin-slow"></div>
+          
+          {/* Profile Image */}
+          <div className="relative w-full h-full rounded-full overflow-hidden z-10">
             <img
-              src="/profile.jpg" // Replace with your photo URL
+              src="/profile.jpg"
               alt="Gourav Sharma"
               className="object-cover w-full h-full"
             />
           </div>
+
+          {/* Floating icons */}
         </div>
 
         {/* Name */}
