@@ -16,7 +16,7 @@ const About = () => {
 
         {/* About Content */}
         <div className="w-full md:w-2/3 md:pl-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
+         
           
           <p className="text-gray-700 mb-4 leading-relaxed">
             Aspiring Software Developer currently pursuing a B.Tech in Computer Science and Engineering at SRM Institute of Science and Technology.
