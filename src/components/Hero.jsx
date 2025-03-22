@@ -10,77 +10,92 @@ import {
 
 const Hero = () => {
   return (
-    <section className="w-screen h-screen flex justify-center items-center bg-gray-900 text-white py-20 px-4">
-      <div className="container mx-auto px-4 text-center">
-        {/* Name */}
-        <h1 className="text-5xl font-bold mb-4">Hi, I'm Gourav Sharma</h1>
+    <section className="w-screen h-screen flex justify-center items-center bg-gray-900 text-white py-10 px-4">
+      <div className="bg-gray-800 rounded-xl shadow-xl p-10 flex flex-col items-center max-w-xl w-full text-center">
+        
+        {/* Profile Image */}
+        <div className="relative w-40 h-40 mb-6">
+          <div className="rounded-full border-8 border-yellow-400 w-full h-full overflow-hidden">
+            <img
+              src="/profile.jpg" // Replace with your photo URL
+              alt="Gourav Sharma"
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
 
-        <div className="text-2xl text-blue-400">
-        <Typewriter
-          words={[
-            "Aspiring Software Developer",
-            "Full Stack Web Developer",
-            "React & Django Enthusiast"
-          ]}
-          loop={true}
-          cursor
-          cursorStyle="_"
-          typeSpeed={70}
-          deleteSpeed={50}
-          delaySpeed={1500}
-        />
+        {/* Name */}
+        <h1 className="text-4xl font-extrabold mb-2 text-white">
+          Hi, I'm Gourav Sharma
+        </h1>
+
+        {/* Typewriter Animation */}
+        <div className="text-xl text-blue-400 mb-4">
+          <Typewriter
+            words={[
+              "Aspiring Software Developer",
+              "Full Stack Web Developer",
+              "React & Django Enthusiast",
+            ]}
+            loop={true}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1500}
+          />
         </div>
 
         {/* Description */}
-        <p className="max-w-2xl mx-auto mb-8 text-gray-300 text-sm sm:text-base md:text-lg">
+        <p className="text-gray-300 text-base mb-8 px-4">
           Crafting user-friendly and scalable digital solutions with React,
           Django, and PostgreSQL. Let's build something great!
         </p>
 
         {/* Social Icons */}
-        <div className="flex justify-center space-x-6 mb-8 text-2xl md:text-3xl">
+        <div className="flex justify-center space-x-5 mb-8 text-2xl">
           <a
             href="mailto:gouravXXXXX@gmail.com"
-            className="transition-transform transform hover:scale-110"
+            className="hover:text-red-500 transition-transform transform hover:scale-110"
           >
-            <FaEnvelope className="hover:text-[#EA4335]" />
+            <FaEnvelope />
           </a>
           <a
             href="https://www.linkedin.com/in/gourav-sharma-4919862a7"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform transform hover:scale-110"
+            className="hover:text-blue-500 transition-transform transform hover:scale-110"
           >
-            <FaLinkedin className="hover:text-[#0A66C2]" />
+            <FaLinkedin />
           </a>
           <a
             href="https://github.com/GouravSharma26"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform transform hover:scale-110"
+            className="hover:text-white transition-transform transform hover:scale-110"
           >
-            <FaGithub className="hover:text-[#333333]" />
+            <FaGithub />
           </a>
           <a
             href="https://twitter.com/yourtwitterhandle"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform transform hover:scale-110"
+            className="hover:text-sky-400 transition-transform transform hover:scale-110"
           >
-            <FaTwitter className="hover:text-[#1DA1F2]" />
+            <FaTwitter />
           </a>
           <a
             href="https://instagram.com/yourinstagramhandle"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform transform hover:scale-110"
+            className="hover:text-pink-500 transition-transform transform hover:scale-110"
           >
-            <FaInstagram className="hover:text-[#E1306C]" />
+            <FaInstagram />
           </a>
         </div>
 
         {/* Buttons */}
-        <div className="flex justify-center gap-4 mt-8">
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="#contact"
             className="bg-transparent border border-blue-500 text-blue-500 px-6 py-3 rounded-full hover:bg-blue-500 hover:text-white transition text-sm sm:text-base"
