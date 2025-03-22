@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
   animation: {
     'spin-slow': 'spin 8s linear infinite',
   },
