@@ -1,5 +1,13 @@
 import React, { useRef, useEffect } from "react";
-import { FaGraduationCap, FaUsers, FaCode, FaLaptopCode, FaBook, FaRobot, FaArchive } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaUsers,
+  FaCode,
+  FaLaptopCode,
+  FaBook,
+  FaRobot,
+  FaArchive,
+} from "react-icons/fa";
 
 const timelineData = [
   { year: "2023", event: "Started B.Tech in Computer Science @ SRM IST", icon: <FaGraduationCap /> },
@@ -13,35 +21,113 @@ const timelineData = [
 ];
 
 const Timeline = () => {
-    return (
-      <section className="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
-        <div className="max-w-7xl mx-auto text-center px-4">
-          <h2 className="text-4xl font-bold text-blue-600 mb-12">My Timeline</h2>
-  
-          {/* Scrollable container */}
-          <div className="horizontal-scrollbar custom-scrollbar">
-            {timelineData.map((item, index) => (
-              <div
-                key={index}
-                className="relative flex-shrink-0 w-72 md:w-80 p-6 bg-white border-t-4 border-blue-500 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 scroll-snap-align-center"
-              >
-                {/* Icon */}
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white border-4 border-blue-500 rounded-full flex justify-center items-center shadow-md">
-                  <div className="text-blue-600 text-xl">{item.icon}</div>
-                </div>
-  
-                {/* Card Content */}
-                <div className="mt-8">
-                  <h3 className="text-xl font-semibold text-blue-600">{item.year}</h3>
-                  <p className="mt-2 text-gray-700">{item.event}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
+  const containerRef = useRef(null);
+
+  const handleWheel = (e) => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    if (container.contains(e.target)) {
+      e.preventDefault();
+      container.scrollLeft += e.deltaY;
+    }
   };
-  
+
+  useEffect(() => {
+    window.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const startTouch = (e) => {
+      isDown = true;
+      startX = e.touches[0].pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    };
+
+    const moveTouch = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.touches[0].pageX - container.offsetLeft;
+      const walk = (startX - x) * 2;
+      container.scrollLeft = scrollLeft + walk;
+    };
+
+    const endTouch = () => {
+      isDown = false;
+    };
+
+    container.addEventListener("touchstart", startTouch);
+    container.addEventListener("touchmove", moveTouch, { passive: false });
+    container.addEventListener("touchend", endTouch);
+
+    return () => {
+      container.removeEventListener("touchstart", startTouch);
+      container.removeEventListener("touchmove", moveTouch);
+      container.removeEventListener("touchend", endTouch);
+    };
+  }, []);
+
+  return (
+    <section
+      id="timeline"
+      className="w-full bg-gradient-to-r from-[#e0f7ff] to-[#f7faff] text-black py-20 px-4 overflow-hidden"
+    >
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-16 text-blue-600">
+          My Timeline
+        </h2>
+
+        <div
+          ref={containerRef}
+          className="flex overflow-x-auto overflow-y-hidden relative px-12 pb-10 gap-10 custom-scrollbar"
+          style={{
+            scrollSnapType: "x mandatory",
+            WebkitOverflowScrolling: "touch",
+            scrollBehavior: "smooth",
+          }}
+        >
+          {/* Timeline Line */}
+          <div className="absolute top-1/2 transform -translate-y-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-blue-600 z-0"></div>
+
+          {timelineData.map((item, index) => (
+            <div
+              key={index}
+              className="relative flex flex-col items-center flex-shrink-0 w-[280px] md:w-[320px] group scroll-snap-align-center"
+            >
+              {/* Dot with Icon */}
+              <div className="z-10 w-12 h-12 rounded-full bg-white border-4 border-blue-500 flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110">
+                <div className="text-blue-600 text-xl">{item.icon}</div>
+              </div>
+
+              {/* Card */}
+              <div
+                className={`mt-10 ${index % 2 === 0 ? "translate-y-[-60px]" : "translate-y-[60px]"}
+                bg-white rounded-2xl shadow-xl p-6 border-t-4 border-blue-500 transition-transform duration-300 group-hover:scale-105 w-full`}
+              >
+                <h3 className="text-xl md:text-2xl font-semibold text-blue-600 mb-2 text-center">
+                  {item.year}
+                </h3>
+                <p className="text-sm md:text-base text-gray-700 text-center">
+                  {item.event}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Timeline;
