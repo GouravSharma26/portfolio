@@ -10,14 +10,14 @@ const Contact = () => {
         <div className="flex flex-col items-center space-y-6 text-gray-700 text-lg">
           <div className="flex items-center space-x-4">
             <FaEnvelope className="text-blue-600 text-2xl" />
-            <a href="mailto:gouravXXXXX@gmail.com" className="hover:text-blue-600 transition duration-300">
-              gouravXXXXX@gmail.com
+            <a href="mailto:gouravns111@gmail.com" className="hover:text-blue-600 transition duration-300">
+              gouravns111@gmail.com
             </a>
           </div>
 
           <div className="flex items-center space-x-4">
             <FaPhone className="text-blue-600 text-2xl" />
-            <span>+91 XXXXXXXX</span>
+            <span>+91 8769549919</span>
           </div>
 
           <div className="flex items-center space-x-4">

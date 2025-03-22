@@ -86,7 +86,7 @@ const Hero = () => {
             <FaGithub />
           </a>
           <a
-            href="https://twitter.com/yourtwitterhandle"
+            href="https://x.com/GouavsHarma259"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-sky-400 transition-transform transform hover:scale-110"
